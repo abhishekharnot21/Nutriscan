@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NutriScan — Dashboard</title>
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="dashboard.html"><span class="brand-mark">N</span><strong>NutriScan</strong></a>
+    <nav>
+      <a class="active" href="dashboard.html">Dashboard</a>
+      <a href="history.html">History</a>
+      <a href="profile.html">Profile</a>
+    </nav>
+    <div class="avatar">SC</div>
+  </header>
+
+  <main class="container">
+    <section class="dashboard-intro">
+      <p class="eyebrow">AI NUTRITION ASSISTANT</p>
+      <h1>Know what's on your<br><span>plate.</span></h1>
+      <p>Upload a food photo and NutriScan identifies the items and estimates calories and nutrition.</p>
+      <small>Thursday · 01 Oct 2026</small>
+    </section>
+
+    <section class="scan-card card">
+      <h2>Scan your meal</h2>
+      <p>Use a clear photo with the food visible from above or at an angle.</p>
+      <label class="drop-zone" id="dropZone">
+        <input type="file" id="foodImage" accept="image/png,image/jpeg" hidden>
+        <div id="uploadContent">
+          <div class="camera-icon">📷</div>
+          <strong>Drop your food image here</strong>
+          <span>or click to browse · JPG, PNG up to 10 MB</span>
+        </div>
+        <img id="previewImage" class="preview-image hidden" alt="Selected food preview">
+      </label>
+      <div class="scan-actions">
+        <button class="primary-btn" id="analyzeBtn">✦ Analyze Food</button>
+        <label class="secondary-btn" for="foodImage">Choose Image</label>
+      </div>
+      <p class="demo-note">Demo mode: analysis is currently simulated. The real AI model will be connected later.</p>
+    </section>
+
+    <section class="card">
+      <div class="section-head"><div><h2>Today's food</h2><p>Recently analyzed meals</p></div><a href="history.html">View all</a></div>
+      <div class="food-list">
+        <div class="food-row"><span class="food-emoji">🍛</span><div><strong>Rice &amp; Dal</strong><small>Lunch · 250 g</small></div><b>420 kcal</b></div>
+        <div class="food-row"><span class="food-emoji">🥚</span><div><strong>Eggs &amp; Roti</strong><small>Breakfast · 2 eggs + 2 roti</small></div><b>365 kcal</b></div>
+        <div class="food-row"><span class="food-emoji">🍎</span><div><strong>Apple</strong><small>Snack · 1 medium</small></div><b>95 kcal</b></div>
+      </div>
+    </section>
+
+    <section class="card goal-card">
+      <div class="section-head"><h2>Daily calorie goal</h2><a href="profile.html">Edit goal</a></div>
+      <div class="goal-layout">
+        <div class="donut"><div><strong>1,440</strong><span>of 2,000 kcal</span></div></div>
+        <div class="goal-stats"><div><span>Consumed</span><b>72%</b></div><div class="progress"><span style="width:72%"></span></div><div class="remaining"><span>Remaining</span><b>560 kcal</b></div></div>
+      </div>
+    </section>
+
+    <section class="card">
+      <div class="section-head"><div><h2>Nutrition today</h2><p>Your estimated daily intake</p></div><a href="history.html">Details</a></div>
+      <div class="nutrition-grid">
+        <div><span>Protein</span><strong>52 <small>g</small></strong></div>
+        <div><span>Carbs</span><strong>184 <small>g</small></strong></div>
+        <div><span>Fat</span><strong>44 <small>g</small></strong></div>
+        <div><span>Fiber</span><strong>19 <small>g</small></strong></div>
+      </div>
+    </section>
+
+    <section class="stats-grid">
+      <div class="stat card"><span>Calories</span><strong>1,440 <small>kcal</small></strong></div>
+      <div class="stat card"><span>Protein</span><strong>52 <small>g</small></strong></div>
+      <div class="stat card"><span>Carbohydrates</span><strong>184 <small>g</small></strong></div>
+      <div class="stat card"><span>Fat</span><strong>44 <small>g</small></strong></div>
+    </section>
+
+    <section class="card weekly-card">
+      <div class="section-head"><div><h2>Weekly calories</h2><p>Average daily intake</p></div><span>Last 7 days</span></div>
+      <div class="bar-chart">
+        <div class="bar-item"><i style="height:62%"></i><small>Fri</small></div>
+        <div class="bar-item"><i style="height:78%"></i><small>Sat</small></div>
+        <div class="bar-item"><i style="height:48%"></i><small>Sun</small></div>
+        <div class="bar-item"><i style="height:68%"></i><small>Mon</small></div>
+        <div class="bar-item"><i style="height:84%"></i><small>Tue</small></div>
+        <div class="bar-item"><i style="height:72%"></i><small>Wed</small></div>
+        <div class="bar-item"><i style="height:73%"></i><small>Thu</small></div>
+      </div>
+    </section>
+  </main>
+  <div class="toast" id="toast"></div>
+  <script src="assets/js/app.js"></script>
+</body>
+</html>

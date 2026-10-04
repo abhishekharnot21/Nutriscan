@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NutriScan — Profile</title><link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+<header class="site-header"><a class="brand" href="dashboard.html"><span class="brand-mark">N</span><strong>NutriScan</strong></a><nav><a href="dashboard.html">Dashboard</a><a href="history.html">History</a><a class="active" href="profile.html">Profile</a></nav><div class="avatar">SC</div></header>
+<main class="container">
+  <section class="page-title"><p class="eyebrow">YOUR PROFILE</p><h1>Personalize your goal.</h1><p>These details will later be used to calculate an estimated daily calorie target.</p></section>
+  <section class="card form-card">
+    <div class="profile-header"><div class="large-avatar">SC</div><div><h2>Sample User</h2><p>sample@example.com</p></div></div>
+    <form id="profileForm" class="profile-form">
+      <div class="two-col"><div><label>Full name</label><input value="Sample User"></div><div><label>Age</label><input type="number" value="21"></div></div>
+      <div class="two-col"><div><label>Height (cm)</label><input type="number" value="170"></div><div><label>Weight (kg)</label><input type="number" value="65"></div></div>
+      <label>Activity level</label><select><option>Lightly active</option><option>Moderately active</option><option>Very active</option></select>
+      <label>Goal</label><div class="goal-options"><label><input type="radio" name="goal" checked> Maintain weight</label><label><input type="radio" name="goal"> Lose weight</label><label><input type="radio" name="goal"> Gain weight</label></div>
+      <div class="target-box"><span>Estimated daily target</span><strong>2,000 kcal</strong><small>Demo value — the real calculation will be implemented in the backend.</small></div>
+      <button class="primary-btn" type="submit">Save changes</button>
+    </form>
+  </section>
+</main>
+<script src="assets/js/app.js"></script>
+</body>
+</html>

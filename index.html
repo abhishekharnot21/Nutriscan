@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NutriScan — Sign In</title>
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body class="auth-page">
+  <main class="auth-shell">
+    <a class="top-close" href="dashboard.html" aria-label="Close">×</a>
+
+    <section class="auth-hero">
+      <p class="eyebrow">AI NUTRITION ASSISTANT</p>
+      <h1>Understand your food.<br><span>One photo at a time.</span></h1>
+      <p class="hero-copy">Scan your meal, discover what's on your plate, and keep track of your nutrition with AI-powered food recognition.</p>
+      <div class="feature-pill">
+        <span class="feature-icon">🍛</span>
+        <div><strong>Smart food detection</strong><small>AI-powered calorie estimation</small></div>
+        <span class="spark">✦</span>
+      </div>
+    </section>
+
+    <section class="auth-card">
+      <div class="auth-tabs">
+        <button class="active" data-auth="signin">Sign in</button>
+        <a href="register.html">Create account</a>
+      </div>
+      <div class="auth-heading">
+        <h2>Welcome back</h2>
+        <p>Sign in to continue your nutrition journey.</p>
+      </div>
+
+      <form id="loginForm">
+        <label>Email address</label>
+        <input type="email" id="loginEmail" placeholder="you@example.com" required>
+        <label>Password</label>
+        <div class="password-wrap">
+          <input type="password" id="loginPassword" placeholder="Enter your password" required>
+          <button type="button" class="show-btn" data-toggle-password="loginPassword">Show</button>
+        </div>
+        <div class="form-row">
+          <label class="check-label"><input type="checkbox"> <span>Remember me</span></label>
+          <a href="#" onclick="alert('Password reset will be connected to Flask later.'); return false;">Forgot password?</a>
+        </div>
+        <button class="primary-btn" type="submit">Sign in <span>→</span></button>
+      </form>
+      <p class="demo-note">Frontend demo — authentication will be connected to Flask + MySQL later.</p>
+    </section>
+  </main>
+  <script src="assets/js/app.js"></script>
+</body>
+</html>

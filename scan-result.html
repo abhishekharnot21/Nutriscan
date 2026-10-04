@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NutriScan — Scan Result</title><link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+<header class="site-header"><a class="brand" href="dashboard.html"><span class="brand-mark">N</span><strong>NutriScan</strong></a><nav><a class="active" href="dashboard.html">Dashboard</a><a href="history.html">History</a><a href="profile.html">Profile</a></nav><div class="avatar">SC</div></header>
+<main class="container narrow">
+  <section class="page-title"><p class="eyebrow">ANALYSIS RESULT</p><h1>Food identified.</h1><p>This is a frontend demonstration. The real model will provide the prediction later.</p></section>
+  <section class="card result-card">
+    <div class="result-icon">🍛</div><div><span class="eyebrow">PREDICTED FOOD</span><h2>Dal</h2><p class="confidence">Model confidence: <strong>91%</strong></p></div>
+  </section>
+  <section class="card">
+    <div class="section-head"><div><h2>Estimated quantity</h2><p>A photo cannot reliably determine exact food weight.</p></div></div>
+    <div class="quantity-control"><button onclick="changeQty(-25)">−</button><strong id="qty">150 g</strong><button onclick="changeQty(25)">+</button></div>
+    <p class="demo-note">Please confirm or correct the estimated quantity before nutrition is calculated.</p>
+  </section>
+  <section class="card">
+    <div class="section-head"><div><h2>Estimated nutrition</h2><p>Values will come from the nutrition database/API.</p></div></div>
+    <div class="nutrition-grid"><div><span>Calories</span><strong>180 <small>kcal</small></strong></div><div><span>Protein</span><strong>10 <small>g</small></strong></div><div><span>Carbs</span><strong>25 <small>g</small></strong></div><div><span>Fat</span><strong>5 <small>g</small></strong></div></div>
+    <button class="primary-btn full" onclick="alert('Demo: meal saved. Flask + MySQL will handle this later.')">Add to today's food</button>
+  </section>
+</main>
+<script src="assets/js/app.js"></script>
+</body>
+</html>
